@@ -18,10 +18,9 @@ class Celda_Categoria: UITableViewCell {
         // Initialization code
     }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    func updateViews(categoria: Categoria){
+        lblCategoria.text = categoria.titulo
+        imgCategoria.image = UIImage(named: categoria.imagen)
     }
 
 }
