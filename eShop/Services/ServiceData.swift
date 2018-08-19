@@ -62,14 +62,14 @@ class ServiceData {
     }
     
     func getProductos(categoriaProducto categoria: String) -> [Producto] {
-        switch categoria {
+        switch categoria.lowercased() {
             case "playeras":
                 return getPlayeras()
             case "gorras":
                 return getGorras()
             case "sudaderas":
                 return getSudaderas()
-            case "digitales":
+            case "digital":
                 return getDigitales()
             default:
                 return getPlayeras()

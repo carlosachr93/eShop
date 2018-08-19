@@ -30,6 +30,23 @@ class Controller_Categorias: UIViewController, UITableViewDataSource,UITableView
         tablaCategoria.dataSource = self
         tablaCategoria.delegate = self 
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let tv_categoria = ServiceData.instancia.getCategorias()[indexPath.row]
+        performSegue(withIdentifier: "Controller_Productos", sender: tv_categoria)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let productosVC = segue.destination as? Controller_Productos
+        {
+            let btnBarItem = UIBarButtonItem()
+            btnBarItem.title = ""
+            navigationItem.backBarButtonItem = btnBarItem
+            assert(sender as? Categoria != nil)
+            productosVC.initProductos(categoria: sender as! Categoria)
+        }
+        
+    }
 
     
 

@@ -86,17 +86,17 @@
                     <navigationItem key="navigationItem" title="eShop" id="HJ1-Ql-tU3"/>
                     <connections>
                         <outlet property="tablaCategoria" destination="vfk-W0-ATg" id="MpH-cZ-icU"/>
-                        <segue destination="15t-ir-c0v" kind="show" id="iAr-GL-Z8g"/>
+                        <segue destination="15t-ir-c0v" kind="show" identifier="Controller_Productos" id="iAr-GL-Z8g"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1076" y="133.5832083958021"/>
         </scene>
-        <!--View Controller-->
+        <!--Controller Productos-->
         <scene sceneID="iym-fd-MLi">
             <objects>
-                <viewController id="15t-ir-c0v" sceneMemberID="viewController">
+                <viewController id="15t-ir-c0v" customClass="Controller_Productos" customModule="eShop" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="CBv-Ox-PLe"/>
                         <viewControllerLayoutGuide type="bottom" id="Zh1-lS-8g5"/>
@@ -121,7 +121,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="mcg-Eh-VVY" customClass="Celda_Producto" customModule="eShop" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ProductoCell" id="mcg-Eh-VVY" customClass="Celda_Producto" customModule="eShop" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="180" height="273"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -183,6 +183,9 @@
                             <constraint firstItem="nwa-qC-wL5" firstAttribute="leading" secondItem="7Xa-2F-B6C" secondAttribute="leading" id="q2J-Ns-BZi"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="productosCollection" destination="nwa-qC-wL5" id="DNt-wM-h5r"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ace-jY-TUs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
